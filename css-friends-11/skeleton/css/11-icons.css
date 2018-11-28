@@ -20,3 +20,15 @@
 .icon-favorite {
   background-position: 0% 23%;
 }
+
+.icon-comment:hover {
+  background-position: 0% 11%;
+}
+
+.icon-reblog:hover {
+  background-position: 0% 56%;
+}
+
+.icon-favorite:hover {
+  background-position: 0% 34%;
+}
