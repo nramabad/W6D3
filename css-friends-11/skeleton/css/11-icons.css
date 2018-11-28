@@ -1,5 +1,5 @@
 /* PHASE 11: Icons */
-[class*=icon-] {
+[class*="icon-"] {
   background-image: url('../images/sprite.png');
   background-size: 25px 250px;
   display: inline-block;
@@ -31,4 +31,9 @@
 
 .icon-favorite:hover {
   background-position: 0% 34%;
+}
+
+[class*="icon-small-"] {
+  width: 20px;
+  padding-top: 20px;
 }
