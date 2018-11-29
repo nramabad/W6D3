@@ -12,7 +12,6 @@ class FollowToggle {
   
   render() {
     this.$el.html(this.followState ? "Unfollow!" : "Follow!");
-    // this.$el.attr("disabled");
   }
   
   handleClick(e) {
@@ -21,23 +20,18 @@ class FollowToggle {
     e.preventDefault();
     if (this.followState) {
       follow = APIUtil.unfollowUser(this.userID);
+      this.$el.attr("disabled", true);
+      console.log(follow)
     } else {
       follow = APIUtil.followUser(this.userID);
+      this.$el.attr("disabled", true);
     }
     // console.log(follow.prop("status"));
     follow.then( (res) => {
       this.followState = !this.followState;
       this.render();
+      this.$el.attr("disabled", false);
     });
-    // let action =  this.followState ? 'DELETE' : 'POST';
-    // $.ajax ({
-    //   method: action,
-    //   url: `/users/${this.userID}/follow`,
-    //   dataType: 'JSON'
-    // }).then( (res) => {
-    //   this.followState = !this.followState;
-    //   this.render();
-    // });
   }
 }
 
